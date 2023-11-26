@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for eva-vid on 2023-11-26T18:09:37+02:00
+# fly.toml app configuration file generated for eva-vid-still-moon-1655 on 2023-11-26T18:37:36+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "eva-vid"
+app = "eva-vid-still-moon-1655"
 primary_region = "jnb"
 
 [build]
