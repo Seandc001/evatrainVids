@@ -10,14 +10,36 @@ import requests
 import responses
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
 
+#from http.server import BaseHTTPRequestHandler
+ 
 import threading
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
 
 
-os.environ["OPENAI_API_KEY"] = "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"
+#class handler(BaseHTTPRequestHandler):
+ 
+#    def do_GET(self):
+#        self.send_response(200)
+#        self.send_header('Content-type','text/plain')
+#        self.end_headers()
+#        self.wfile.write('Hello, world!'.encode('utf-8'))
+#        return
+
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the environment variable
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+# Use the environment variable as needed
+os.environ["OPENAI_API_KEY"] = openai_api_key
+
+#os.environ["OPENAI_API_KEY"] = ""
 
 #Git method
 #git_repo_url = "https://github.com/ultralytics/ultralytics.git"

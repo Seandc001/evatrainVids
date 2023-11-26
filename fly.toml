@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for eva-vid on 2023-11-26T12:50:26+02:00
+# fly.toml app configuration file generated for eva-vid on 2023-11-26T18:09:37+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -10,9 +10,10 @@ primary_region = "jnb"
   builder = "paketobuildpacks/builder:base"
 
 [env]
+  PORT = "8080"
 
 [http_service]
-  internal_port = 5001 
+  internal_port = 5001
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
